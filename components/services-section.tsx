@@ -54,39 +54,39 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section id="services" className="py-20 bg-background">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-2">
+    <section id="services" className="py-20 bg-white">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-12">
+          <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-2">
             Нашите услуги
           </p>
-          <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
             Пълен спектър от автомобилни услуги
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-gray-500 max-w-xl">
             Предлагаме професионално обслужване за всички видове автомобили с гаранция за качество
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {services.map((service) => (
-            <div 
-              key={service.title}
-              className="group p-5 bg-card rounded-md border border-border hover:border-primary hover:shadow-md transition-all"
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {services?.map((service) => (
+            <div
+              key={service?.title}
+              className="group p-5 bg-white rounded-xl border border-gray-200 hover:border-blue-200 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-250 cursor-default"
             >
-              <div className="w-11 h-11 bg-primary/10 group-hover:bg-primary rounded-md flex items-center justify-center mb-4 transition-colors">
-                <service.icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
+              <div className="w-10 h-10 bg-blue-50 group-hover:bg-blue-600 rounded-lg flex items-center justify-center mb-4 transition-colors duration-250">
+                <service.icon className="w-5 h-5 text-blue-600 group-hover:text-white transition-colors duration-250" />
               </div>
-              <h3 className="text-base font-semibold text-card-foreground group-hover:text-primary mb-2 transition-colors">
-                {service.title}
+              <h3 className="text-sm font-semibold text-gray-900 group-hover:text-blue-600 mb-2 transition-colors duration-250">
+                {service?.title}
               </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {service.description}
+              <p className="text-sm text-gray-500 leading-relaxed">
+                {service?.description}
               </p>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

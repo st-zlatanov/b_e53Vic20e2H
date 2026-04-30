@@ -7,7 +7,7 @@ import {
   Snowflake, 
   Settings, 
   Zap 
-} from "lucide-react"
+} from "lucide-react";
 
 const services = [
   {

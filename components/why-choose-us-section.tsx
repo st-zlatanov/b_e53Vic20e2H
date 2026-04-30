@@ -1,4 +1,4 @@
-import { Car, Award, Users, Clock, ShieldCheck } from "lucide-react"
+import { Car, Award, Users, Clock, ShieldCheck } from "lucide-react";
 
 const features = [
   {

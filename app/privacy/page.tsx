@@ -3,9 +3,26 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://be53vic204136.builtwithrocket.new';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: "Политика за поверителност | Автосервиз AutoWorks Сандански",
   description: "Политика за поверителност и защита на личните данни на Автосервиз AutoWorks Сандански.",
+  alternates: {
+    canonical: `${baseUrl}/privacy`,
+  },
+  openGraph: {
+    title: "Политика за поверителност | Автосервиз AutoWorks Сандански",
+    description: "Политика за поверителност и защита на личните данни на Автосервиз AutoWorks Сандански.",
+    url: `${baseUrl}/privacy`,
+    type: 'website',
+    locale: 'bg_BG',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function PrivacyPage() {

@@ -3,9 +3,26 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://be53vic204136.builtwithrocket.new';
+
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: "Условия за ползване | Автосервиз AutoWorks Сандански",
   description: "Общи условия за ползване на уебсайта на Автосервиз AutoWorks Сандански.",
+  alternates: {
+    canonical: `${baseUrl}/terms`,
+  },
+  openGraph: {
+    title: "Условия за ползване | Автосервиз AutoWorks Сандански",
+    description: "Общи условия за ползване на уебсайта на Автосервиз AutoWorks Сандански.",
+    url: `${baseUrl}/terms`,
+    type: 'website',
+    locale: 'bg_BG',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function TermsPage() {

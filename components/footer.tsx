@@ -1,20 +1,20 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Phone, MapPin, Clock } from "lucide-react";
-import { Logo } from "@/components/logo";
 
 const serviceLinks = [
-  { name: "Компютърна диагностика", href: "#services" },
-  { name: "Смяна на масла", href: "#services" },
-  { name: "Спирачна система", href: "#services" },
-  { name: "Климатични системи", href: "#services" },
-  { name: "Ремонт на двигатели", href: "#services" },
-  { name: "Електрически проблеми", href: "#services" },
+  { name: "Компютърна диагностика", href: "/services" },
+  { name: "Смяна на масла", href: "/services" },
+  { name: "Спирачна система", href: "/services" },
+  { name: "Климатични системи", href: "/services" },
+  { name: "Ремонт на двигатели", href: "/services" },
+  { name: "Електрически проблеми", href: "/services" },
 ]
 
 const companyLinks = [
-  { name: "За нас", href: "#about" },
-  { name: "Галерия", href: "#gallery" },
-  { name: "Контакти", href: "#contact" },
+  { name: "За нас", href: "/#about" },
+  { name: "Галерия", href: "/gallery" },
+  { name: "Контакти", href: "/#contact" },
 ]
 
 export function Footer() {
@@ -25,22 +25,24 @@ export function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
-              <Logo className="w-9 h-9" />
-              <div className="flex flex-col leading-tight">
-                <span className="font-bold text-white text-sm">AutoWorks</span>
-                <span className="text-xs text-blue-400">Автосервиз Сандански</span>
-              </div>
+              <Image
+                src="/assets/images/d97fd803-0524-4be1-a4ec-5ddf3501b82d_removalai_preview-1777713898254.png"
+                alt="Autoworks Сандански лого"
+                width={120}
+                height={40}
+                className="h-10 w-auto object-contain brightness-0 invert"
+              />
             </Link>
             <p className="text-sm text-gray-400 mb-5 leading-relaxed">
               Професионален автосервиз за всички марки автомобили. Качествено обслужване на конкурентни цени.
             </p>
             <div className="space-y-2.5">
-              <a href="tel:+359888123456" className="flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 transition-colors">
+              <a href="tel:0876709701" className="flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 transition-colors">
                 <Phone className="w-3.5 h-3.5 shrink-0" />
-                +359 88 812 3456
+                0876709701
               </a>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=гр.+Сандански,+бул.+Европа+17"
+                href="https://maps.app.goo.gl/mN1HVXd5bvLD3SkQA"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-sm text-gray-400 hover:text-blue-400 transition-colors"

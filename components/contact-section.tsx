@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { Phone, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
+import { Phone, MapPin, Clock, Send, CheckCircle2, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -13,15 +13,32 @@ export function ContactSection() {
   })
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    await new Promise(resolve => setTimeout(resolve, 900))
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-    setFormState({ name: "", phone: "", message: "" })
-    setTimeout(() => setIsSubmitted(false), 6000)
+    setError(null)
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formState),
+      })
+
+      if (!response.ok) {
+        throw new Error('Грешка при изпращане')
+      }
+
+      setIsSubmitted(true)
+      setFormState({ name: "", phone: "", message: "" })
+      setTimeout(() => setIsSubmitted(false), 6000)
+    } catch {
+      setError('Възникна грешка. Моля, опитайте отново или се свържете с нас по телефон.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -43,7 +60,7 @@ export function ContactSection() {
           {/* Contact info + map */}
           <div className="lg:col-span-2 space-y-5">
             <a
-              href="tel:+359888123456"
+              href="tel:0876709701"
               className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-200 hover:shadow-md transition-all group"
             >
               <div className="w-10 h-10 bg-blue-50 group-hover:bg-blue-600 rounded-lg flex items-center justify-center transition-colors shrink-0">
@@ -51,12 +68,12 @@ export function ContactSection() {
               </div>
               <div>
                 <p className="text-xs text-gray-400 mb-0.5">Телефон</p>
-                <p className="text-sm font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">+359 88 812 3456</p>
+                <p className="text-sm font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">0876709701</p>
               </div>
             </a>
 
             <a
-              href="https://www.google.com/maps/search/?api=1&query=гр.+Сандански,+бул.+Европа+17"
+              href="https://maps.app.goo.gl/mN1HVXd5bvLD3SkQA"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200 hover:border-blue-200 hover:shadow-md transition-all group"
@@ -84,7 +101,7 @@ export function ContactSection() {
             {/* Map */}
             <div className="aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-sm">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47696.99854693!2d23.253!3d41.567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14aad282e2f00001%3A0x400a01269bf4e20!2sSandanski!5e0!3m2!1sbg!2sbg!4v1"
+                src="https://maps.app.goo.gl/mN1HVXd5bvLD3SkQA"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -115,6 +132,13 @@ export function ContactSection() {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
+                {error && (
+                  <div className="flex items-start gap-3 p-3 bg-red-50 border border-red-200 rounded-lg">
+                    <AlertCircle className="w-4 h-4 text-red-600 shrink-0 mt-0.5" />
+                    <p className="text-sm text-red-700">{error}</p>
+                  </div>
+                )}
+
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1.5">
                     Вашето име <span className="text-red-500">*</span>
@@ -138,7 +162,7 @@ export function ContactSection() {
                     id="phone"
                     type="tel"
                     required
-                    placeholder="+359 88 123 4567"
+                    placeholder="0876709701"
                     value={formState.phone}
                     onChange={(e) => setFormState(prev => ({ ...prev, phone: e.target.value }))}
                     className="border-gray-200 focus:border-blue-400 focus:ring-blue-400"

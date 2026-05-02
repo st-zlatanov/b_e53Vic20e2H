@@ -5,55 +5,47 @@ import './globals.css'
 
 const dmSans = DM_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'] })
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://be53vic204136.builtwithrocket.new';
+const baseUrl = 'https://autoworksbg.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: 'Автосервиз Сандански | Професионален ремонт на всички марки автомобили',
+  title: 'Autoworks Сандански | Професионален Автосервиз',
   description: 'Професионален автосервиз в Сандански за всички марки автомобили - BMW, Mercedes, Audi, Toyota, Honda, Ford и други. Диагностика, ремонти, обслужване.',
   keywords: 'автосервиз, Сандански, ремонт на автомобили, компютърна диагностика, BMW, Mercedes, Audi, Toyota, Honda, Ford',
   alternates: {
     canonical: baseUrl,
   },
   openGraph: {
-    title: 'Автосервиз Сандански | Професионален ремонт',
+    title: 'Autoworks Сандански | Професионален Автосервиз',
     description: 'Професионален автосервиз в Сандански за всички марки автомобили. Диагностика, ремонти, обслужване.',
     url: baseUrl,
     locale: 'bg_BG',
     type: 'website',
-    siteName: 'AutoWorks Сандански',
+    siteName: 'Autoworks Сандански',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Автосервиз AutoWorks Сандански - професионален ремонт на автомобили',
+        alt: 'Autoworks Сандански - Професионален Автосервиз',
         type: 'image/png',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Автосервиз Сандански | Професионален ремонт',
+    title: 'Autoworks Сандански | Професионален Автосервиз',
     description: 'Професионален автосервиз в Сандански за всички марки автомобили.',
     images: ['/og-image.png'],
   },
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
+        url: '/assets/images/d97fd803-0524-4be1-a4ec-5ddf3501b82d_removalai_preview-1777713898254.png',
+        type: 'image/png',
       },
     ],
-    apple: '/apple-icon.png',
+    apple: '/assets/images/d97fd803-0524-4be1-a4ec-5ddf3501b82d_removalai_preview-1777713898254.png',
   },
 }
 
@@ -72,19 +64,15 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Organization',
-              name: 'AutoWorks Сандански',
-              alternateName: 'Автосервиз AutoWorks',
+              name: 'Autoworks Сандански',
+              alternateName: 'Автосервиз Autoworks',
               url: baseUrl,
-              logo: `${baseUrl}/placeholder-logo.png`,
+              logo: `${baseUrl}/assets/images/d97fd803-0524-4be1-a4ec-5ddf3501b82d_removalai_preview-1777713898254.png`,
               description: 'Професионален автосервиз в Сандански за всички марки автомобили',
-              sameAs: [
-                'https://www.facebook.com',
-                'https://www.instagram.com',
-              ],
               contactPoint: {
                 '@type': 'ContactPoint',
                 contactType: 'Customer Service',
-                telephone: '+359-88-812-3456',
+                telephone: '+359-876-709-701',
                 areaServed: 'BG',
                 availableLanguage: 'bg',
               },
@@ -99,17 +87,17 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'AutoRepair',
-              name: 'AutoWorks Сандански',
-              image: `${baseUrl}/placeholder-logo.png`,
+              name: 'Autoworks Сандански',
+              image: `${baseUrl}/assets/images/d97fd803-0524-4be1-a4ec-5ddf3501b82d_removalai_preview-1777713898254.png`,
               description: 'Професионален автосервиз за диагностика, ремонти и обслужване на всички марки автомобили',
               url: baseUrl,
-              telephone: '+359-88-812-3456',
-              email: 'contact@autoworks-sandanski.bg',
+              telephone: '+359-876-709-701',
+              email: 'sklav40@gmail.com',
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: 'бул. Европа 17',
                 addressLocality: 'Сандански',
-                postalCode: '2700',
+                postalCode: '2800',
                 addressCountry: 'BG',
               },
               geo: {
@@ -163,21 +151,21 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebPage',
-              name: 'Автосервиз Сандански | Професионален ремонт на всички марки автомобили',
+              name: 'Autoworks Сандански | Професионален Автосервиз',
               description: 'Професионален автосервиз в Сандански за всички марки автомобили - BMW, Mercedes, Audi, Toyota, Honda, Ford и други. Диагностика, ремонти, обслужване.',
               url: baseUrl,
               isPartOf: {
                 '@type': 'WebSite',
-                name: 'AutoWorks Сандански',
+                name: 'Autoworks Сандански',
                 url: baseUrl,
               },
               inLanguage: 'bg',
             }),
           }}
         />
-      
-      <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbe53vic204136back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.18" />
-      <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2" /></head>
+
+        <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbe53vic204136back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.18" />
+        <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2" /></head>
       <body className={`${dmSans.className} antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

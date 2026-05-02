@@ -18,20 +18,29 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-52 sm:pb-44">
-        <div className="max-w-2xl">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-blue-600/20 border border-blue-400/30 rounded-full px-3 py-1 mb-5">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
-            <span className="text-blue-200 text-xs font-medium tracking-wide">Сертифицирани специалисти</span>
-          </div>
+   <div className="flex items-center justify-center gap-3 mb-6">
+  <span className="hidden sm:block w-12 h-[2px] bg-blue-500"></span>
 
+  <p className="text-sm sm:text-2xl text-white font-semibold tracking-[0.15em] uppercase text-center leading-tight">
+    AUTOWORKS САНДАНСКИ
+  </p>
+
+  <span className="hidden sm:block w-12 h-[2px] bg-blue-500"></span>
+</div>
+        {/* <div className="max-w-2xl mx-auto text-center sm:text-left"> */}
+<div className="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left flex flex-col items-center lg:items-start">
+          
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 sm:mb-5">
-            Автосервиз за всички марки автомобили в гр. Сандански
-          </h1>
-
-          <p className="text-sm sm:text-lg text-white/85 max-w-xl mb-6 sm:mb-8 leading-relaxed">
-            Диагностика, ремонти и професионално обслужване на европейски, американски, японски и корейски автомобили.
+            Грижа за вашия автомобил
+          </h1> 
+          
+        <p className="text-sm sm:text-lg text-white/85 max-w-xl mb-6 sm:mb-8 leading-relaxed">
+            Професионална диагностика, прецизни ремонти и обслужване за всички марки автомобили.
           </p>
+
+          {/* <p className="text-sm sm:text-lg text-white/85 max-w-xl mb-6 sm:mb-8 leading-relaxed">
+            Диагностика, ремонти и професионално обслужване на европейски, американски, японски и корейски автомобили.
+          </p> */}
 
           <div className="flex flex-col sm:flex-row gap-3">
             <Button
@@ -57,22 +66,17 @@ export function HeroSection() {
           </div>
 
           {/* Trust indicators */}
-          <div className="flex items-center gap-5 mt-7 sm:mt-8">
-            <div className="text-center">
-              <div className="text-xl font-bold text-white">15+</div>
-              <div className="text-xs text-white/60">години опит</div>
-            </div>
-            <div className="w-px h-8 bg-white/20" />
-            <div className="text-center">
-              <div className="text-xl font-bold text-white">5000+</div>
-              <div className="text-xs text-white/60">доволни клиенти</div>
-            </div>
-            <div className="w-px h-8 bg-white/20" />
-            <div className="text-center">
-              <div className="text-xl font-bold text-white">Всички</div>
-              <div className="text-xs text-white/60">марки</div>
-            </div>
-          </div>
+          <div className="flex items-center justify-center sm:justify-start gap-6 mt-6 text-xs sm:text-sm text-white/80">
+
+  <span>Опит</span>
+  <span className="opacity-40">|</span>
+
+  <span>Качество</span>
+  <span className="opacity-40">|</span>
+
+  <span>Доверие</span>
+
+</div>
         </div>
       </div>
 

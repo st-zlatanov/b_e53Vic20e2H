@@ -27,16 +27,16 @@ export function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <nav className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 shrink-0">
-            <Image
-              src="/assets/images/d97fd803-0524-4be1-a4ec-5ddf3501b82d_removalai_preview-1777713898254.png"
-              alt="Autoworks Сандански лого"
-              width={120}
-              height={40}
-              className="h-10 w-auto object-contain"
-              priority
-            />
-          </Link>
+          <Link href="/" className="flex items-center shrink-0">
+          <Image
+            src="/logo.png"
+            alt="Autoworks"
+            width={180}
+            height={60}
+            className="h-14 md:h-16 w-auto object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]"
+            priority
+          />
+        </Link>
 
           {/* Desktop nav */}
           <div className="hidden lg:flex lg:items-center lg:gap-7">

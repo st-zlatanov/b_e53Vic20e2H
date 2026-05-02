@@ -9,14 +9,14 @@ const baseUrl = 'https://autoworksbg.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: 'Autoworks Сандански | Професионален Автосервиз',
-  description: 'Професионален автосервиз в Сандански за всички марки автомобили - BMW, Mercedes, Audi, Toyota, Honda, Ford и други. Диагностика, ремонти, обслужване.',
-  keywords: 'автосервиз, Сандански, ремонт на автомобили, компютърна диагностика, BMW, Mercedes, Audi, Toyota, Honda, Ford',
+  title: 'Автосервиз Сандански | Autoworks – Ремонт и Диагностика на Автомобили',
+  description: 'Автосервиз в Сандански – диагностика, ремонти и обслужване на всички марки автомобили. Бързо обслужване, коректност и доказано качество.',
+  keywords: ['автосервиз, Сандански, ремонт на автомобили, компютърна диагностика, BMW, Mercedes, Audi, Toyota, Honda, Ford, сервиз Сандански, американски автомобили, Jeep, обслужване'],
   alternates: {
     canonical: baseUrl,
   },
   openGraph: {
-    title: 'Autoworks Сандански | Професионален Автосервиз',
+    title: 'Автосервиз Сандански | Autoworks – Ремонт и Диагностика на Автомобили',
     description: 'Професионален автосервиз в Сандански за всички марки автомобили. Диагностика, ремонти, обслужване.',
     url: baseUrl,
     locale: 'bg_BG',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: 'Autoworks Сандански',
     images: [
       {
-        url: '/og-image.png',
+        url: `${baseUrl}/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'Autoworks Сандански - Професионален Автосервиз',
@@ -36,17 +36,16 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Autoworks Сандански | Професионален Автосервиз',
     description: 'Професионален автосервиз в Сандански за всички марки автомобили.',
-    images: ['/og-image.png'],
+    images: [`${baseUrl}/og-image.png`],
   },
   icons: {
-    icon: [
-      {
-        url: '/assets/images/d97fd803-0524-4be1-a4ec-5ddf3501b82d_removalai_preview-1777713898254.png',
-        type: 'image/png',
-      },
-    ],
-    apple: '/assets/images/d97fd803-0524-4be1-a4ec-5ddf3501b82d_removalai_preview-1777713898254.png',
-  },
+  icon: [
+    { url: '/favicon.ico' },
+    { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+    { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+  ],
+  apple: '/apple-touch-icon.png',
+},
 }
 
 export default function RootLayout({
@@ -102,8 +101,8 @@ export default function RootLayout({
               },
               geo: {
                 '@type': 'GeoCoordinates',
-                latitude: '41.5533',
-                longitude: '23.3168',
+                latitude: 41.5435862,
+                longitude: 23.259747,
               },
               openingHoursSpecification: [
                 {
@@ -164,8 +163,7 @@ export default function RootLayout({
           }}
         />
 
-        <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fbe53vic204136back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.18" />
-        <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2" /></head>
+        </head>
       <body className={`${dmSans.className} antialiased`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

@@ -14,7 +14,7 @@ const features = [
   {
     icon: Users,
     title: "Опитни механици",
-    description: "Нашият екип има над 15 години опит в бранша."
+    description: "Нашият екип има над 10 години опит в бранша."
   },
   {
     icon: Clock,
@@ -30,7 +30,7 @@ const features = [
 
 export function WhyChooseUsSection() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-12 bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -46,11 +46,11 @@ export function WhyChooseUsSection() {
 
             <div className="grid grid-cols-2 gap-4">
               <div className="text-center p-5 bg-white rounded-xl border border-gray-200 shadow-sm">
-                <div className="text-3xl font-bold text-blue-600 mb-1">15+</div>
+                <div className="text-3xl font-bold text-blue-600 mb-1">10+</div>
                 <div className="text-sm text-gray-500">години опит</div>
               </div>
               <div className="text-center p-5 bg-white rounded-xl border border-gray-200 shadow-sm">
-                <div className="text-3xl font-bold text-blue-600 mb-1">5000+</div>
+                <div className="text-3xl font-bold text-blue-600 mb-1">1000+</div>
                 <div className="text-sm text-gray-500">доволни клиенти</div>
               </div>
             </div>

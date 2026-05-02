@@ -3,7 +3,7 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import type { Metadata } from "next";
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://be53vic204136.builtwithrocket.new';
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://autoworksbg.com';
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
@@ -46,7 +46,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-lg font-bold text-gray-900 mb-3">1. Общи разпоредби</h2>
               <p>
-                Настоящите Общи условия уреждат отношенията между Автосервиз AutoWorks Сандански (наричан по-долу „Дружеството") и потребителите на уебсайта, достъпен на адрес <strong>autoworks-sandanski.bg</strong>. С използването на уебсайта вие приемате настоящите условия в пълен обем.
+                Настоящите Общи условия уреждат отношенията между Автосервиз AutoWorks Сандански (наричан по-долу „Дружеството") и потребителите на уебсайта, достъпен на адрес <strong>autoworksbg.com</strong>. С използването на уебсайта вие приемате настоящите условия в пълен обем.
               </p>
             </section>
 
@@ -55,8 +55,8 @@ export default function TermsPage() {
               <ul className="list-none space-y-1 mt-2 pl-0">
                 <li><strong>Наименование:</strong> Автосервиз AutoWorks Сандански</li>
                 <li><strong>Адрес:</strong> гр. Сандански, бул. Европа 17</li>
-                <li><strong>Телефон:</strong> <a href="tel:+359888123456" className="text-blue-600 hover:underline">+359 88 812 3456</a></li>
-                <li><strong>Имейл:</strong> info@autoworks-sandanski.bg</li>
+                <li><strong>Телефон:</strong> <a href="tel:+359876709701" className="text-blue-600 hover:underline">+359 87 670 9701</a></li>
+                
               </ul>
             </section>
 
@@ -118,7 +118,7 @@ export default function TermsPage() {
               <h2 className="text-lg font-bold text-gray-900 mb-3">10. Контакт</h2>
               <p>
                 За въпроси относно настоящите условия се свържете с нас на{" "}
-                <a href="tel:+359888123456" className="text-blue-600 hover:underline">+359 88 812 3456</a>{" "}
+                <a href="tel:+359876709701" className="text-blue-600 hover:underline">+359 87 670 9701</a>{" "}
                 или посетете ни на адрес гр. Сандански, бул. Европа 17.
               </p>
             </section>

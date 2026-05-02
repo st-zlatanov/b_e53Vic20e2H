@@ -11,14 +11,14 @@ const highlights = [
 
 
 const stats = [
-{ value: "15+", label: "години опит" },
-{ value: "5000+", label: "доволни клиенти" },
+{ value: "10+", label: "години опит" },
+{ value: "1000+", label: "доволни клиенти" },
 { value: "Всички", label: "марки автомобили" }];
 
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-12 bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Image side */}
@@ -54,7 +54,7 @@ export function AboutSection() {
               За нас
             </p>
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-5">
-              Над 15 години професионално обслужване
+              Над 10 години професионално обслужване
             </h2>
 
             <div className="space-y-4 text-gray-600 mb-7 text-sm sm:text-base leading-relaxed">
@@ -80,14 +80,14 @@ export function AboutSection() {
             </div>
 
             {/* Stats row */}
-            <div className="flex gap-6 pt-6 border-t border-gray-200">
+            {/* <div className="flex gap-6 pt-6 border-t border-gray-200">
               {stats?.map((stat, i) =>
               <div key={i}>
                   <div className="text-2xl font-bold text-blue-600">{stat?.value}</div>
                   <div className="text-xs text-gray-500 mt-0.5">{stat?.label}</div>
                 </div>
               )}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

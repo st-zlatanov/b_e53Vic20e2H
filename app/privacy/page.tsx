@@ -56,8 +56,8 @@ export default function PrivacyPage() {
               <ul className="list-none space-y-1 mt-2 pl-0">
                 <li><strong>Наименование:</strong> Автосервиз AutoWorks Сандански</li>
                 <li><strong>Адрес:</strong> гр. Сандански, бул. Европа 17</li>
-                <li><strong>Телефон:</strong> <a href="tel:+359888123456" className="text-blue-600 hover:underline">+359 88 812 3456</a></li>
-                <li><strong>Имейл:</strong> info@autoworks-sandanski.bg</li>
+                <li><strong>Телефон:</strong> <a href="tel:+359876709701" className="text-blue-600 hover:underline">+359 87 670 9701</a></li>
+              
               </ul>
             </section>
 
@@ -108,11 +108,9 @@ export default function PrivacyPage() {
                 <li><strong>Право на оттегляне на съгласие</strong> — по всяко време, без да засяга законосъобразността на предходната обработка.</li>
               </ul>
               <p className="mt-3">
-                За упражняване на правата си се свържете с нас на <a href="tel:+359888123456" className="text-blue-600 hover:underline">+359 88 812 3456</a> или на адрес гр. Сандански, бул. Европа 17.
+                За упражняване на правата си се свържете с нас на <a href="tel:+359876709701" className="text-blue-600 hover:underline">+359 87 670 9701</a> или на адрес гр. Сандански, бул. Европа 17.
               </p>
-              <p className="mt-2">
-                Имате право да подадете жалба до Комисията за защита на личните данни (КЗЛД): <a href="https://www.cpdp.bg" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">www.cpdp.bg</a>.
-              </p>
+              
             </section>
 
             <section>

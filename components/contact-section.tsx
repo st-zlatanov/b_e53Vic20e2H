@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 export function ContactSection() {
   const [formState, setFormState] = useState({
     name: "",
+     email: "",
     phone: "",
     message: ""
   })
@@ -32,7 +33,7 @@ export function ContactSection() {
       }
 
       setIsSubmitted(true)
-      setFormState({ name: "", phone: "", message: "" })
+      setFormState({ name: "", email: "", phone: "", message: "" })
       setTimeout(() => setIsSubmitted(false), 6000)
     } catch {
       setError('Възникна грешка. Моля, опитайте отново или се свържете с нас по телефон.')
@@ -42,7 +43,7 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-12 bg-gray-50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <p className="text-blue-600 text-sm font-semibold uppercase tracking-widest mb-2">
@@ -166,6 +167,21 @@ export function ContactSection() {
                     className="border-gray-200 focus:border-blue-400 focus:ring-blue-400"
                   />
                 </div>
+
+                <div>
+  <label className="block text-sm font-medium text-gray-700 mb-1.5">
+    Имейл <span className="text-red-500">*</span>
+  </label>
+  <Input
+    type="email"
+    required
+    placeholder="example@gmail.com"
+    value={formState.email || ""}
+    onChange={(e) =>
+      setFormState(prev => ({ ...prev, email: e.target.value }))
+    }
+  />
+</div>
 
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1.5">

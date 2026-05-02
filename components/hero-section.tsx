@@ -19,13 +19,15 @@ export function HeroSection() {
       {/* Content */}
       <div className="relative z-10 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 pt-24 sm:pt-28 pb-52 sm:pb-44">
    <div className="flex items-center justify-center gap-3 mb-6">
-  <span className="hidden sm:block w-12 h-[2px] bg-blue-500"></span>
+  <div className="text-center mb-6">
+  <p className="text-2xl sm:text-4xl lg:text-5xl text-white font-extrabold tracking-[0.2em] uppercase leading-tight ">
+  AUTO<span className="text-blue-500">WORKS</span>
+</p>
 
-  <p className="text-sm sm:text-2xl text-white font-semibold tracking-[0.15em] uppercase text-center leading-tight">
-    AUTOWORKS САНДАНСКИ
+  <p className="text-xs sm:text-lg text-white/80 font-semibold tracking-[0.15em] uppercase leading-tight mt-1">
+    АВТОСЕРВИЗ САНДАНСКИ
   </p>
-
-  <span className="hidden sm:block w-12 h-[2px] bg-blue-500"></span>
+</div>
 </div>
         {/* <div className="max-w-2xl mx-auto text-center sm:text-left"> */}
 <div className="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left flex flex-col items-center lg:items-start">
@@ -33,6 +35,9 @@ export function HeroSection() {
           <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 sm:mb-5">
             Грижа за вашия автомобил
           </h1> 
+          <h2 className="sr-only">
+  Autoworks – автосервиз в Сандански за ремонт и обслужване на автомобили.
+</h2>
           
         <p className="text-sm sm:text-lg text-white/85 max-w-xl mb-6 sm:mb-8 leading-relaxed">
             Професионална диагностика, прецизни ремонти и обслужване за всички марки автомобили.

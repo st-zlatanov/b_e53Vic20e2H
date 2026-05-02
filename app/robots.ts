@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://be53vic204136.builtwithrocket.new'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://autoworksbg.com'
 
   return {
     rules: {

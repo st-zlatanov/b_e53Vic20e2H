@@ -26,7 +26,7 @@ export function Footer() {
           <div className="sm:col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2.5 mb-4">
               <Image
-                src="/assets/images/d97fd803-0524-4be1-a4ec-5ddf3501b82d_removalai_preview-1777713898254.png"
+                src="/logo.png"
                 alt="Autoworks Сандански лого"
                 width={120}
                 height={40}

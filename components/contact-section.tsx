@@ -99,18 +99,31 @@ export function ContactSection() {
             </div>
 
             {/* Map */}
-            <div className="aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-sm">
-              <iframe
-                src="https://maps.app.goo.gl/mN1HVXd5bvLD3SkQA"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Google Maps - Сандански"
-              />
-            </div>
+            <div className="relative aspect-video rounded-xl overflow-hidden border border-gray-200 shadow-sm group">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1493.0797172766568!2d23.260010882429103!3d41.54414505194903!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14aa319db5bb849f%3A0xc7003b9c08db07b2!2z0JDQstGC0L7RgdC10YDQstC40LcgQXV0b3dvcmtz!5e0!3m2!1sen!2sbg!4v1777714843136!5m2!1sen!2sbg"
+    className="w-full h-full pointer-events-none"
+    loading="lazy"
+    style={{ border: 0 }}
+    referrerPolicy="no-referrer-when-downgrade"
+    title="AutoWorks Сандански"
+  />
+
+  {/* Overlay */}
+  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+    <span className="opacity-0 group-hover:opacity-100 text-white text-sm font-semibold tracking-wide transition">
+      Отвори в Google Maps
+    </span>
+  </div>
+
+  {/* Clickable layer */}
+  <a
+    href="https://maps.app.goo.gl/mN1HVXd5bvLD3SkQA"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="absolute inset-0 z-10"
+  />
+</div>
           </div>
 
           {/* Form */}

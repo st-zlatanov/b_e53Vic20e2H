@@ -13,7 +13,7 @@ export function HeroSection() {
         }}
       />
 
-      {/* Dark Overlay - slightly stronger for readability */}
+      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-black/40" />
 
       {/* Content */}
@@ -39,7 +39,7 @@ export function HeroSection() {
               asChild
               className="gap-2 bg-blue-600 hover:bg-blue-700 text-white border-0 shadow-lg shadow-blue-900/30 w-full sm:w-auto"
             >
-              <Link href="#contact">
+              <Link href="/#contact">
                 Запази час
                 <ArrowRight className="w-4 h-4" />
               </Link>
@@ -50,7 +50,7 @@ export function HeroSection() {
               asChild
               className="hidden sm:inline-flex gap-2 border-white/30 bg-white/10 text-white hover:bg-white/20 hover:text-white hover:border-white/40 backdrop-blur-sm"
             >
-              <Link href="#services">
+              <Link href="/services">
                 Нашите услуги
               </Link>
             </Button>
@@ -83,7 +83,7 @@ export function HeroSection() {
 
             {/* Phone */}
             <a
-              href="tel:+359888123456"
+              href="tel:0876709701"
               className="flex items-center gap-3 group hover:bg-white/5 px-2 py-1.5 rounded-lg transition-all duration-200"
             >
               <div className="flex-shrink-0 w-9 h-9 sm:w-11 sm:h-11 rounded-full bg-blue-600 group-hover:bg-blue-500 flex items-center justify-center transition-colors shadow-md">
@@ -92,14 +92,14 @@ export function HeroSection() {
               <div>
                 <p className="text-[10px] text-white/50 uppercase tracking-wider mb-0.5">Телефон</p>
                 <p className="text-white font-semibold text-sm group-hover:text-blue-300 transition-colors">
-                  +359 88 812 3456
+                  0876709701
                 </p>
               </div>
             </a>
 
             {/* Address */}
             <a
-              href="https://www.google.com/maps/search/?api=1&query=гр.+Сандански,+бул.+Европа+17"
+              href="https://maps.app.goo.gl/mN1HVXd5bvLD3SkQA"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 group hover:bg-white/5 px-2 py-1.5 rounded-lg transition-all duration-200"
